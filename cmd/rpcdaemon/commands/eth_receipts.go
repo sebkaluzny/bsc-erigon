@@ -741,7 +741,7 @@ func marshalReceipt(receipt *types.Receipt, txn types.Transaction, chainConfig *
 		"transactionIndex":  hexutil.Uint64(receipt.TransactionIndex),
 		"from":              from,
 		"to":                txn.GetTo(),
-		"nonce":             txn.GetNonce(),
+		"nonce":             hexutil.Uint64(txn.GetNonce()),
 		"value":             txn.GetValue(),
 		"type":              hexutil.Uint(txn.Type()),
 		"gasUsed":           hexutil.Uint64(receipt.GasUsed),
