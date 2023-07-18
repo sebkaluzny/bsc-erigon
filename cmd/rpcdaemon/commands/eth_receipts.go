@@ -736,7 +736,7 @@ func marshalReceipt(receipt *types.Receipt, txn types.Transaction, chainConfig *
 	fields := map[string]interface{}{
 		"blockHash":         receipt.BlockHash,
 		"blockNumber":       hexutil.Uint64(receipt.BlockNumber.Uint64()),
-		"blockTimestamp":    header.Time,
+		"blockTimestamp":    hexutil.Uint64(header.Time),
 		"transactionHash":   txnHash,
 		"transactionIndex":  hexutil.Uint64(receipt.TransactionIndex),
 		"from":              from,
